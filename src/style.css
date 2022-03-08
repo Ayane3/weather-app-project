@@ -1,0 +1,92 @@
+body {
+  font-family: "Varela Round", sans-serif;
+}
+h1 {
+  font-size: 43px;
+  font-weight: bold;
+  position: relative;
+  left: 45px;
+  top: 57px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li,
+.current-weather {
+  list-style: none;
+  font-size: 17px;
+  line-height: 35px;
+  height: 35px;
+}
+.weather-app {
+  background: #c0f2fc;
+  border: 1px solid #000;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 25px auto;
+  padding: 15px;
+}
+.current-weather {
+  position: relative;
+  right: -50px;
+  top: 60px;
+}
+.current-temperature {
+  font-size: 38px;
+  font-weight: bold;
+}
+.units {
+  font-size: 20px;
+  position: relative;
+  top: -15px;
+}
+
+.cloud-icon {
+  color: #444444;
+  position: relative;
+  background: #f8d9fbf3;
+  border: 3px solid #000;
+  border-radius: 50%;
+  margin: 45px auto;
+  font-size: 88px;
+  width: 200px;
+  height: 200px;
+  padding: 45px;
+  position: relative;
+  top: -50px;
+}
+.box {
+  background: #f8d9fb;
+  border: 2px solid #000;
+  border-radius: 10px;
+  line-height: 35px;
+  padding: 10px 6px;
+  margin: 10px auto;
+}
+.temperature {
+  font-size: 15px;
+}
+.weather-information {
+  text-align: center;
+  margin: 50px auto;
+  padding: 0;
+}
+
+.weather-days {
+  text-align: center;
+  font-size: 16px;
+}
+.weather-icon {
+  color: #444444;
+  text-align: center;
+  font-size: 40px;
+}
+
+.weather-details {
+  font-size: 12px;
+}
+.search-form {
+  margin: 25px;
+  padding: 25px 75px;
+}
