@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/95c3865645.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                placeholder="Enter a city"
+                autofocus="on"
+                autocomplete="off"
+                class="form-control shadow-sm"
+                id="city-input"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-success shadow-sm w-100"
+              />
+            </div>
+            <div class="col-3">
+              <button
+                class="btn btn-primary shadow-sm w-100"
+                id="current-location-button"
+              >
+                Current
+              </button>
+            </div>
+          </div>
+        </form>
+        <h1 id="city-name"></h1>
+        <div class="row">
+          <div class="col-4">
+            <ul>
+              <li class="current-weather" id="current-time"></li>
+              <li class="current-weather" id="description"></li>
+            </ul>
+          </div>
+          <div class="col-4">
+            <i class="fas fa-cloud cloud-icon"></i>
+          </div>
+          <div class="col-4">
+            <span class="current-temperature" id="temperature"></span>
+            <span class="units">
+              <a href="#" id="celsius">°C</a> |
+              <a href="#" id="fahrenheit">°F</a>
+            </span>
+
+            <ul>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span>km/h</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row weather-information">
+          <div class="col">
+            <div class="box">
+              <div class="weather-days">Fri</div>
+              <i class="fas fa-cloud-rain weather-icon"></i>
+              <div class="temperature">3° / -3°</div>
+              <div class="weather-details">Rain and snow</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="box">
+              <div class="weather-days">Sat</div>
+              <i class="fas fa-cloud-sun weather-icon"></i>
+              <div class="temperature">-1° / -16°</div>
+              <div class="weather-details">Partly cloudy</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="box">
+              <div class="weather-days">Sun</div>
+              <i class="fas fa-cloud-sun weather-icon"></i>
+              <div class="temperature">-11° / -17°</div>
+              <div class="weather-details">Partly cloudy</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="box">
+              <div class="weather-days">Mon</div>
+              <i class="fas fa-cloud-sun weather-icon"></i>
+              <div class="temperature">-7° / -8°</div>
+              <div class="weather-details">Partly cloudy</div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="box">
+              <div class="weather-days">Tues</div>
+              <i class="fas fa-cloud-sun weather-icon"></i>
+              <div class="temperature">-3° / -7°</div>
+              <div class="weather-details">Partly cloudy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
