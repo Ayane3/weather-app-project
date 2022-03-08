@@ -90,3 +90,7 @@ li,
   margin: 25px;
   padding: 25px 75px;
 }
+#open-source-code-link {
+  display: block;
+  text-align: center;
+}
