@@ -19,13 +19,16 @@ li,
   line-height: 35px;
   height: 35px;
 }
+.weather-app-wrapper {
+  max-width: 700px;
+  margin: 25px auto;
+  padding: 15px;
+}
+
 .weather-app {
   background: #c0f2fc;
   border: 1px solid #000;
   border-radius: 10px;
-  max-width: 700px;
-  margin: 25px auto;
-  padding: 15px;
 }
 .current-weather {
   position: relative;
@@ -89,8 +92,4 @@ li,
 .search-form {
   margin: 25px;
   padding: 25px 75px;
-}
-#open-source-code-link {
-  display: block;
-  text-align: center;
 }
