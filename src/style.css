@@ -105,14 +105,27 @@ a {
   font-size: 12px;
 }
 .search-form {
-  margin: 25px;
-  padding: 25px 75px;
+  margin: 20px;
+  padding: 35px 20px;
+}
+.city-input {
+  background: #f9f7fe;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+}
+
+.btn {
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px 0;
+  border: none;
 }
 
 .btn-success {
   background: #885df1;
-  padding: 7px 0;
-  border: none;
   transition: all 200ms ease-in-out;
 }
 .btn-success:hover {
@@ -127,5 +140,5 @@ a {
   margin: 45px auto;
   width: 200px;
   height: 200px;
-  padding: 8px;
+  padding: 10px;
 }
