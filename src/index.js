@@ -44,10 +44,6 @@ function displayWeatherCondition(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
-let apiKey = "b8ca9c74ef5f3c6a38c4feab706452dd";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=metric`;
-
-axios.get(apiUrl).then(displayWeatherCondition);
 
 function searchLocation(position) {
   let apiKey = "b8ca9c74ef5f3c6a38c4feab706452dd";
@@ -57,6 +53,18 @@ function searchLocation(position) {
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
+function search(city) {
+  let apiKey = "b8ca9c74ef5f3c6a38c4feab706452dd";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
 function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
@@ -64,3 +72,7 @@ function getCurrentLocation(event) {
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+search("New York");
