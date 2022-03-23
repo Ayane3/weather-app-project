@@ -116,23 +116,23 @@ a {
   color: rgba(39, 33, 66, 0.4);
   font-size: 16px;
 }
-
 .btn {
   font-weight: 700;
   font-size: 16px;
   padding: 10px 0;
   border: none;
 }
-
-.btn-success {
+#search-button {
   background: #885df1;
   transition: all 200ms ease-in-out;
 }
-.btn-success:hover {
+
+#search-button:hover {
   text-decoration: none;
   color: #fff;
-  background: #885df1;
+  background: rgb(137, 103, 224);
 }
+
 #icon {
   background: #f8d9fbf3;
   border: 3px solid #272142;
