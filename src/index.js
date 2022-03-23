@@ -1,48 +1,20 @@
-function formatDate(date) {
-  let currentHours = date.getHours();
-  if (currentHours < 10) {
-    currentHours = `0${currentHours}`;
-  }
-  let currentMinutes = date.getMinutes();
-  if (currentMinutes < 10) {
-    currentMinutes = `0${currentMinutes}`;
-  }
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  let currentDay = days[date.getDay()];
-  return `${currentDay}, ${currentHours}:${currentMinutes}`;
-}
+let apiKey = "b8ca9c74ef5f3c6a38c4feab706452dd";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=metric`;
+
+axios.get(apiUrl).then(displayWeatherCondition);
 
 function displayWeatherCondition(response) {
-  document.querySelector("#city-name").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].description;
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
-}
+  let cityElement = document.querySelector("#city-name");
+  let temperatureElement = document.querySelector("#temperature");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
 
-function searchCity(city) {
-  let apiKey = "b8ca9c74ef5f3c6a38c4feab706452dd";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayWeatherCondition);
-}
-
-function handleSubmit(event) {
-  event.preventDefault();
-  let city = document.querySelector("#city-input").value;
-  searchCity(city);
+  cityElement.innerHTML = response.data.name;
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = response.data.wind.speed;
 }
 
 function searchLocation(position) {
@@ -58,14 +30,5 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-let now = new Date();
-let currentTime = document.querySelector("#current-time");
-currentTime.innerHTML = formatDate(now);
-
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleSubmit);
-
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
-
-searchCity("New York");

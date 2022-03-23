@@ -23,6 +23,18 @@ li,
   line-height: 35px;
   height: 35px;
 }
+
+li strong,
+#humidity,
+#wind {
+  color: #f65282;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
 .weather-app-wrapper {
   max-width: 700px;
   margin: 25px auto;
@@ -42,6 +54,7 @@ li,
 .current-temperature {
   font-size: 38px;
   font-weight: bold;
+  padding-left: 30px;
 }
 .units {
   font-size: 20px;
@@ -49,20 +62,6 @@ li,
   top: -15px;
 }
 
-.cloud-icon {
-  color: #444444;
-  position: relative;
-  background: #f8d9fbf3;
-  border: 3px solid #000;
-  border-radius: 50%;
-  margin: 45px auto;
-  font-size: 88px;
-  width: 200px;
-  height: 200px;
-  padding: 45px;
-  position: relative;
-  top: -50px;
-}
 .box {
   background: #f8d9fb;
   border: 2px solid #000;
@@ -96,4 +95,19 @@ li,
 .search-form {
   margin: 25px;
   padding: 25px 75px;
+}
+.weather-description {
+  padding-left: 30px;
+}
+
+#icon {
+  color: #444444;
+  background: #f8d9fbf3;
+  border: 3px solid #000;
+  border-radius: 50%;
+  margin: 45px auto;
+  font-size: 88px;
+  width: 200px;
+  height: 200px;
+  padding: 45px;
 }

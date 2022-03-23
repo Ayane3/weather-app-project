@@ -17,10 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/95c3865645.js"
-      crossorigin="anonymous"
-    ></script>
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
   </head>
@@ -66,15 +63,24 @@
               </ul>
             </div>
             <div class="col-4">
-              <i class="fas fa-cloud cloud-icon"></i>
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                alt="Sunny"
+                width="100"
+                id="icon"
+              />
             </div>
             <div class="col-4">
               <span class="current-temperature" id="temperature"></span>
               <span class="units">°C </span>
 
               <ul>
-                <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id="wind"></span>km/h</li>
+                <li class="weather-description">
+                  Humidity: <span id="humidity"></span><strong>%</strong>
+                </li>
+                <li class="weather-description">
+                  Wind: <span id="wind"></span><strong>km/h</strong>
+                </li>
               </ul>
             </div>
           </div>
@@ -83,42 +89,14 @@
             <div class="col">
               <div class="box">
                 <div class="weather-days">Fri</div>
-                <i class="fas fa-cloud-rain weather-icon"></i>
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  alt="Sunny"
+                  width="42"
+                  id="weather-icon"
+                />
                 <div class="temperature">3° / -3°</div>
                 <div class="weather-details">Rain and snow</div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="box">
-                <div class="weather-days">Sat</div>
-                <i class="fas fa-cloud-sun weather-icon"></i>
-                <div class="temperature">-1° / -16°</div>
-                <div class="weather-details">Partly cloudy</div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="box">
-                <div class="weather-days">Sun</div>
-                <i class="fas fa-cloud-sun weather-icon"></i>
-                <div class="temperature">-11° / -17°</div>
-                <div class="weather-details">Partly cloudy</div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="box">
-                <div class="weather-days">Mon</div>
-                <i class="fas fa-cloud-sun weather-icon"></i>
-                <div class="temperature">-7° / -8°</div>
-                <div class="weather-details">Partly cloudy</div>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="box">
-                <div class="weather-days">Tues</div>
-                <i class="fas fa-cloud-sun weather-icon"></i>
-                <div class="temperature">-3° / -7°</div>
-                <div class="weather-details">Partly cloudy</div>
               </div>
             </div>
           </div>
@@ -128,7 +106,8 @@
             href="https://github.com/Ayane3/weather-app-project"
             target="_blank"
             >Open-source code</a
-          >, by Ayane Manuel</small
+          >
+          by Ayane Manuel</small
         >
       </div>
     </div>
