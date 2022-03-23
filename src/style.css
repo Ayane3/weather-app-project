@@ -78,10 +78,11 @@ a {
   background: #f8d9fb;
   border: 2px solid #272142;
   border-radius: 16px;
-  line-height: 35px;
-  padding: 10px 6px;
-  margin: 10px auto;
+  line-height: 24px;
+  padding: 3px 1px;
+  margin: 20px auto;
 }
+
 .temperature {
   color: #f65282;
   font-size: 17px;
@@ -105,7 +106,6 @@ a {
 }
 .weather-icon {
   text-align: center;
-  font-size: 40px;
 }
 
 .weather-details {
