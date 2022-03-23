@@ -2,6 +2,7 @@ body {
   font-family: "Varela Round", sans-serif;
 }
 h1 {
+  color: #272142;
   font-size: 43px;
   font-weight: bold;
   position: relative;
@@ -43,34 +44,46 @@ a {
 
 .weather-app {
   background: #c0f2fc;
-  border: 1px solid #000;
-  border-radius: 10px;
+  border: 1px solid #878787;
+  border-radius: 16px;
+  padding: 10px;
 }
+
 .current-weather {
+  color: #272142;
+  padding: 20px;
   position: relative;
-  right: -50px;
-  top: 60px;
+  right: -25px;
+  top: 59px;
 }
 .current-temperature {
+  color: #272142;
   font-size: 38px;
   font-weight: bold;
   padding-left: 30px;
 }
+.weather-description {
+  color: #272142;
+  padding: 20px;
+}
+
 .units {
+  color: #272142;
   font-size: 20px;
   position: relative;
-  top: -15px;
+  top: -13px;
 }
 
 .box {
   background: #f8d9fb;
-  border: 2px solid #000;
-  border-radius: 10px;
+  border: 2px solid #272142;
+  border-radius: 16px;
   line-height: 35px;
   padding: 10px 6px;
   margin: 10px auto;
 }
 .temperature {
+  color: #272142;
   font-size: 15px;
 }
 .weather-information {
@@ -79,12 +92,11 @@ a {
   padding: 0;
 }
 
-.weather-days {
+.daily-weather {
   text-align: center;
   font-size: 16px;
 }
 .weather-icon {
-  color: #444444;
   text-align: center;
   font-size: 40px;
 }
@@ -96,14 +108,21 @@ a {
   margin: 25px;
   padding: 25px 75px;
 }
-.weather-description {
-  padding-left: 30px;
-}
 
+.btn-success {
+  background: #885df1;
+  padding: 7px 0;
+  border: none;
+  transition: all 200ms ease-in-out;
+}
+.btn-success:hover {
+  text-decoration: none;
+  color: #fff;
+  background: #885df1;
+}
 #icon {
-  color: #444444;
   background: #f8d9fbf3;
-  border: 3px solid #000;
+  border: 3px solid #272142;
   border-radius: 50%;
   margin: 45px auto;
   font-size: 88px;
